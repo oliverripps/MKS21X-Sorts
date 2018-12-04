@@ -1,7 +1,16 @@
-public class Sorts{
+public class sorts{
   public static void selectionsort(int[] ary){
-    int[] ary2= new int[];
-    for(int i=0;i<)
+    int[] ary2= new int[0];
+    ary2[0]=ary[0];
+    for(int i=0;i<ary.length;i++){
+      for(int p=0; p<ary2.length;p++){
+        if(ary[i]<ary2[p]){
+          add(ary,p,i);
+          i++;
+          p=0;
+        }
+      }
+    }}
     /*
     int low;
     int high;
@@ -13,15 +22,12 @@ public class Sorts{
         ary[0]=cur;
       }
     }
-  }
-  public static void shiftright(int[] ary, start){
-    for(int i=ary.length;i>start;i++){
+  }*/
+  public static void add(int[] ary, int origin, int newvalue){
+    for(int i=ary.length;i>origin;i++){
       ary[i+1]=ary[i];
     }
-    ary[start]=null;
+    ary[origin]=newvalue;
   }
-  public static void shiftleft(int[] ary){
-
-  }*/
 
 }
