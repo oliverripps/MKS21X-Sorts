@@ -29,5 +29,9 @@ public class sorts{
     }
     ary[origin]=newvalue;
   }
+  /*public static void main(args[] String){
+    int[] ary = {1,3,6,3,6,3,8};
+    System.out.println(selectionsort(ary));
+  }*/
 
 }
