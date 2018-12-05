@@ -1,5 +1,5 @@
 public class sort{
-  public static int[] selectionsort(int[] ary){
+  public static void selectionsort(int[] ary){
     int templow;
     int counter = 0;
     int current;
@@ -18,9 +18,8 @@ public class sort{
       ary[i]=templow;
       counter++;
     }
-    return ary;
   }
-  private static String toString(int[] ary){
+  /*private static String toString(int[] ary){
     String str = "";
     for(int i=0;i<ary.length;i++){
       str+=ary[i];
@@ -31,5 +30,5 @@ public class sort{
   public static void main(String[] args){
     int[] ary = {5,2,6,64,6,8,3,2};
     System.out.println(toString(selectionsort(ary)));
-  }
+  }*/
 }
