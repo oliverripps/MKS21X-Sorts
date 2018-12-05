@@ -23,7 +23,9 @@ public class Sorts{
     String str = "";
     for(int i=0;i<ary.length;i++){
       str+=ary[i];
-      str+=",";
+      if(i<ary.length-1){
+        str+=",";
+      }
     }
     return str;
   }
