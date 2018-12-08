@@ -1,4 +1,4 @@
-public class Sorts{
+public class sort{
   public static void selectionSort(int[] ary){
     int templow;
     int counter = 0;
@@ -18,20 +18,6 @@ public class Sorts{
       ary[i]=templow;
       counter++;
     }
-  }
-  public static void bubbleSort(int[] data){
-    boolean ready= false;
-    int current;
-    while(!ready){
-      ready=true;
-      for(int i = 0;i<data.length-1;i++){
-        if(data[i]>data[i+1]){
-          current=data[i];
-          data[i]=data[i+1];
-          data[i+1]=current;
-          ready=false;
-        }
-      }
   }
   /*private static String toString(int[] ary){
     String str = "";
