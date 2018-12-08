@@ -46,9 +46,12 @@ public class Sorts{
   }
 
   public static void main(String[] args){
-    int[] ary = {5,2,6,64,6,8,3,2, -1, 57, 0};
-    System.out.println(toString(ary));
-    bubbleSort(ary);
-    System.out.println(toString(ary));
+    int[] ary = {57,22,687,-364,698,-8,3,2,0,14,-11, 457, 9};
+    System.out.print("Unsorted Array: " + toString(ary));
+    selectionSort(ary);
+    System.out.println("Sorted Using selectionSort: " + toString(ary));
+    int[] resetary = {57,22,687,-364,698,-8,3,2,0,14,-11, 457, 9};
+    bubbleSort(resetary);
+    System.out.println("Sorted Using bubbleSort: " + toString(resetary));
   }
 }
