@@ -86,5 +86,9 @@ public class Sorts{
     System.out.println("Unsorted Array: " + toString(resetary));
     bubbleSort(resetary);
     System.out.println("Sorted Using bubbleSort: " + toString(resetary));
+    int[] resetary2 = {57,-364,698,-8,3,2,0,14,-11, 457, 9};
+    System.out.println("Unsorted Array: " + toString(resetary2));
+    insertionSort(resetary2);
+    System.out.println("Sorted Using insertionSort: " + toString(resetary2));
   }
 }
