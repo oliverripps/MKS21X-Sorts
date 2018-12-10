@@ -1,5 +1,6 @@
 public class Sorts{
   public static void selectionSort(int[] ary){
+    if(ary.length!=0){
     int templow;
     int counter = 0;
     int current;
@@ -17,9 +18,10 @@ public class Sorts{
       ary[currentindex]=current;
       ary[i]=templow;
       counter++;
-    }
+    }}
   }
   public static void bubbleSort(int[] data){
+    if(data.length!=0){
     boolean ready= false;
     int current;
     while(!ready){
@@ -34,6 +36,7 @@ public class Sorts{
       }
     }
   }
+}
   private static String toString(int[] ary){
     String str = "";
     for(int i=0;i<ary.length;i++){
