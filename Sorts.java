@@ -3,42 +3,38 @@ public class Sorts{
     if(ary.length!=0){
     int templow;
     int counter = 0;
-    int current;
     int currentindex;
     for(int i=0;i<ary.length;i++){
-      templow=ary[i];
-      current=ary[i];
+      templow=ary[i];//setting the temporary lowest and current lowest as the first thing in the ary
       currentindex=i;
-      for(int p=counter; p<ary.length;p++){
-        if(ary[p]<templow){
-          templow=ary[p];
-          current=ary[i];
+      for(int p=i; p<ary.length;p++){
+        if(ary[p]<templow){//looping through each element and seeing if it is lower than the current lowest
+          templow=ary[p];//if lowest, set as lowest
           currentindex=p;
         }}
-      ary[currentindex]=current;
+      ary[currentindex]=ary[i];//insert the lowest into the next position in the order
       ary[i]=templow;
-      counter++;
     }
   }
   }
   public static void bubbleSort(int[] data){
     if(data.length!=0){
-    boolean ready= false;
+    boolean ready= false;//boolean to see if a change was made this round
     int current;
     while(!ready){
       ready=true;
-      for(int i = 0;i<data.length-1;i++){
-        if(data[i]>data[i+1]){
+      for(int i = 0;i<data.length-1;i++){//looping through each element
+        if(data[i]>data[i+1]){//if they are in the wrong order, switch them
           current=data[i];
           data[i]=data[i+1];
           data[i+1]=current;
-          ready=false;
+          ready=false;//showing a change was made
         }
       }
     }
   }
 }
-  public static void insertionSort(int[] ary){
+  public static void insertionSort(int[] ary){//FIX AND ADD COMMENTS
     if(ary.length!=0){
       int current;
       int amntsorted=1;
@@ -56,10 +52,10 @@ public class Sorts{
           else{
             currentplace = l;
             l=-1;
-            System.out.println(currentplace);
           }
         }
           ary[currentplace]=current;
+          amntsorted++;
         }
 
 
