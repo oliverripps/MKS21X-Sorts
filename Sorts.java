@@ -18,7 +18,8 @@ public class Sorts{
       ary[currentindex]=current;
       ary[i]=templow;
       counter++;
-    }}
+    }
+  }
   }
   public static void bubbleSort(int[] data){
     if(data.length!=0){
@@ -37,6 +38,34 @@ public class Sorts{
     }
   }
 }
+  public static void insertionSort(int[] ary){
+    if(ary.length!=0){
+      int current;
+      int amntsorted=1;
+      int currentplace=0;
+      for(int i = amntsorted;i<ary.length;i++){
+        if(ary[i]>=ary[i-1]){
+          amntsorted++;
+        }
+        else{
+          current=ary[i];
+          for(int l=amntsorted;l>=0;l--){
+            if(ary[l]>current){
+              ary[l+1]=ary[l];
+          }
+          else{
+            currentplace = l;
+            l=-1;
+            System.out.println(currentplace);
+          }
+        }
+          ary[currentplace]=current;
+        }
+
+
+    }
+    }
+  }
   private static String toString(int[] ary){
     String str = "";
     for(int i=0;i<ary.length;i++){
