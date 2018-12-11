@@ -38,30 +38,21 @@ public class Sorts{
     if(ary.length!=0){
       int current;
       int amntsorted=1;
-      int currentplace=0;
       for(int i = amntsorted;i<ary.length;i++){
-        if(ary[i]>=ary[i-1]){
-          amntsorted++;
-        }
-        else{
-          current=ary[i];
-          for(int l=amntsorted;l>=0;l--){
-            if(ary[l]>current){
-              ary[l+1]=ary[l];
+        current=ary[i];
+        for(int l=i-1;l>=0;l--){
+          if(current<ary[l]){
+            ary[l+1]=ary[l];
+            ary[l]=current;
           }
           else{
-            currentplace = l;
             l=-1;
           }
         }
-          ary[currentplace]=current;
-          amntsorted++;
-        }
-
-
-    }
+      }
     }
   }
+
   private static String toString(int[] ary){
     String str = "";
     for(int i=0;i<ary.length;i++){
