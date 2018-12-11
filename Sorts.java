@@ -34,19 +34,19 @@ public class Sorts{
     }
   }
 }
-  public static void insertionSort(int[] ary){//FIX AND ADD COMMENTS
-    if(ary.length!=0){
+  public static void insertionSort(int[] ary){
+    if(ary.length!=0){//testing for not being 0
       int current;
-      int amntsorted=1;
-      for(int i = amntsorted;i<ary.length;i++){
-        current=ary[i];
-        for(int l=i-1;l>=0;l--){
-          if(current<ary[l]){
+      int amntsorted=1;//amount of peices that are in the correct place from theleft
+      for(int i = amntsorted;i<ary.length;i++){//starting with the first wrong one, loop through
+        current=ary[i];//current is the one you want to sort
+        for(int l=i-1;l>=0;l--){//starting with the first sorted element loop backword
+          if(current<ary[l]){//if the current one is less shift right
             ary[l+1]=ary[l];
-            ary[l]=current;
+            ary[l]=current;//insert into the empty space
           }
           else{
-            l=-1;
+            l=-10000;//if its sorted, stop the loop by making it -10000
           }
         }
       }
