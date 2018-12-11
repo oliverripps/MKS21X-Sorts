@@ -37,21 +37,18 @@ public class Sorts{
   public static void insertionSort(int[] ary){
     if(ary.length!=0){//testing for not being 0
       int current;
-      int amntsorted=1;//amount of peices that are in the correct place from theleft
-      for(int i = amntsorted;i<ary.length;i++){//starting with the first wrong one, loop through
+      for(int i = 1;i<ary.length;i++){//starting with the first wrong one, loop through
         current=ary[i];//current is the one you want to sort
-        for(int l=i-1;l>=0;l--){//starting with the first sorted element loop backword
-          if(current<ary[l]){//if the current one is less shift right
-            ary[l+1]=ary[l];
-            ary[l]=current;//insert into the empty space
-          }
-          else{
-            l=-10000;//if its sorted, stop the loop by making it -10000
-          }
+        int l = i-1;//the first one sorted
+        while(l>=0 && current<=ary[l]){//while it is still bigger
+          ary[l+1]=ary[l];//shift over
+          l--;
         }
+        ary[l+1]=current;//place
       }
     }
   }
+
 
   private static String toString(int[] ary){
     String str = "";
